@@ -27,7 +27,7 @@ class Factory
      * @param ?ConnectorInterface $connector
      * @param ?ProtocolFactory $protocol
      */
-    public function __construct(LoopInterface $loop = null, ConnectorInterface $connector = null, ProtocolFactory $protocol = null)
+    public function __construct(?LoopInterface $loop = null, ?ConnectorInterface $connector = null, ?ProtocolFactory $protocol = null)
     {
         $this->loop = $loop ?: Loop::get();
         $this->connector = $connector ?: new Connector(array(), $this->loop);

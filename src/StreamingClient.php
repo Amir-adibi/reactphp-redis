@@ -28,7 +28,7 @@ class StreamingClient extends EventEmitter implements Client
     private $subscribed = 0;
     private $psubscribed = 0;
 
-    public function __construct(DuplexStreamInterface $stream, ParserInterface $parser = null, SerializerInterface $serializer = null)
+    public function __construct(DuplexStreamInterface $stream, ?ParserInterface $parser = null, ?SerializerInterface $serializer = null)
     {
         if ($parser === null || $serializer === null) {
             $factory = new ProtocolFactory();
